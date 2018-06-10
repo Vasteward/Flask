@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CHECKERBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+table tr td{
+    width: 50px;
+    height: 50px;
+}
+.color1{
+    background-color: yellow;
+}
+.color2{
+    background-color: green;
+}
+</style>
+<body>
+    <h1> 8x8 matrix</h1>
+    <table>
+        {% for i in range(4): %}
+        <tr>
+            {% for j in range(4): %}
+            <td class='color1'></td>
+            <td class='color2'></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(4): %}
+            <td class='color2'></td>
+            <td class='color1'></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>Refactoring: Step 1</h1>
+    <table>
+        {% for i in range(8): %}
+        <tr>
+            {% for j in range(8): %}
+            <!-- check the html in the console on the in the browser -->
+            <td class='color{{ (i+j)%2 }}'></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>Refactoring: Step 2</h1>
+    <table>
+        {% for i in range(10): %}
+        <tr>
+            {% for j in range(2): %}
+            <td class='color{{ (i+j)%2+1 }}'></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>Matrix Flex: passing in variables</h1>
+        <table>
+        {% for i in range(0,column): %}
+        <tr>
+            {% for j in range(0,row): %}
+            <td class='color{{ (i+j)%2+1 }}'></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</table>
+</body>
+</html>
+

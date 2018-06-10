@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PLAYGROUND</title>
+<style>
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+body {
+    background-color: light blue;
+}
+h1 {
+    color: maroon;
+    margin: 0 auto;
+    font-size: 200px;
+    text-align: center;
+} 
+div{
+    background-color: aqua;
+    border: black 1px solid;
+    margin: 0 10px;
+    height: 300px;
+    width: 300px;
+    display: inline-block;    
+}
+main{
+    margin-left: 220px;
+}
+</style>
+<head>
+<body>
+    <h1>Hello World</h1>
+    <main>
+        {% for x in range(0, number) %}
+        <div style='background-color: {{ color }}' > {{ _ }} </div>
+        {% endfor %}
+    </main>
+</body>

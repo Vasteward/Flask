@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</head>
+<body>
+    <table>
+        <tr class="z-depth-5 green accent-2">
+            <th class="btn-floating pulse">First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </tr>
+        <tr class="striped centered">
+            <td class="waves-effect">{{ first[0] }}</td>
+            <td>{{ last[0]}}</td>
+            <td>{{ full[0] }}</td>
+        </tr>
+        <tr >
+            <td>{{ first[1] }}</td>
+            <td>{{ last[1]}}</td>
+            <td>{{ full[1] }}</td>
+        </tr>
+        <tr class="striped">
+            <td>{{ first[2] }}</td>
+            <td>{{ last[2]}}</td>
+            <td>{{ full[2] }}</td>
+        </tr>
+    </table>
+</body>
+</html>
